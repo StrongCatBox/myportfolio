@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #FFC0D9;
+    --secondary-color: #FF0080;
+    --accent-color: rgb(208, 208, 208);
+}
+
+
+.custom-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-btn:hover {
+    opacity: 0.8;
+}
+
+
+.headercontainer {
+
+    background-color: var(--primary-color);
+
+}
+
+#skills {
+    background-color: var(--primary-color);
+}
+
+.whitekitty {
+
+    width: 400px;
+}
+
+
+.navbar-brand img {
+    height: 200px;
+
+
+}
+
+.custom-navbar {
+    background-color: #FFC0D9 !important;
+    /* Change the navbar background color */
+
+}
+
+.custom-navbar .nav-link {
+    color: #ffffff !important;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+
+    /* Change the nav links color */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #f8f9fa !important;
+    /* Change the nav links hover color */
+}
+
+.navbar-nav {
+    margin-right: 20px;
+}
+
+
+
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+
+/* Réduit la hauteur de la navbar */
+.custom-navbar {
+    height: 60px;
+    padding: 0;
+}
+
+/* Assure que le logo garde une taille appropriée */
+.custom-navbar .navbar-brand img {
+    height: 100px;
+    /* Ajuste cette valeur en fonction de la taille souhaitée pour le logo */
+    margin-top: 10px;
+    /* Ajuste le margin-top pour centrer verticalement le logo */
+}
+
+/* Ajuste la taille des liens de navigation pour correspondre à la hauteur réduite de la navbar */
+.custom-navbar .nav-link {
+    line-height: 60px;
+    /* Correspond à la hauteur de la navbar */
+}
+
+
+.about-img {
+    max-width: 250px;
+    /* Ajuste cette valeur pour la taille souhaitée */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.skill-logo {
+    width: 80px;
+    /* Ajuste cette valeur pour la taille souhaitée des logos */
+    height: 80px;
+    /* Même taille pour la hauteur */
+    object-fit: contain;
+    /* S'assure que l'image s'adapte bien à la taille sans être déformée */
+}
+
+.projectsCarousel {
+    margin-top: 120px;
+}
