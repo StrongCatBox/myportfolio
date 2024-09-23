@@ -1,0 +1,117 @@
+{
+    "en": {
+      "navbar": {
+        "about": "About Me",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact Me",
+        "downloadCV": "Download CV"
+      },
+      "header": {
+        "greeting": "Jeina Salamova",
+        "contactBtn": "Contact Me"
+      },
+      "about": {
+        "title": "About Me",
+        "description": "Hello! I'm Jeina Salamova, a passionate junior web developer. I recently completed my Bac +2 in Web Development and Web Mobile Development. I love creating things and bringing innovative ideas to life through code. My journey in web development has equipped me with the skills to build dynamic and responsive websites. I'm always eager to learn new technologies and improve my craft. Let's create something amazing together!"
+      },
+      "skills": {
+        "title": "Skills",
+        "html": "HTML5",
+        "css": "CSS3",
+        "javascript": "JavaScript",
+        "php": "PHP",
+        "sql": "SQL",
+        "wordpress": "WordPress",
+        "nodejs": "Node.js",
+        "vuejs": "Vue.js",
+        "symfony": "Symfony",
+        "androidStudio": "Android Studio",
+        "bootstrap": "Bootstrap",
+        "figma": "Figma",
+        "python": "Python",
+        "django": "Django"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "fitAndFood": {
+          "title": "Fit and Food",
+          "description": "A WordPress site for fit motivators who help people get in shape."
+        },
+        "nestinove": {
+          "title": "Nestinove",
+          "description": "An online incubator designed to support entrepreneurs."
+        },
+        "portfolio": {
+          "title": "Portfolio",
+          "description": "My personal portfolio showcasing my projects and skills."
+        }
+      },
+      "contact": {
+        "title": "Contact Me",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "sendBtn": "Send"
+      }
+    },
+    "fr": {
+      "navbar": {
+        "about": "À propos de moi",
+        "skills": "Compétences",
+        "projects": "Projets",
+        "contact": "Contactez-moi",
+        "downloadCV": "Télécharger CV"
+      },
+      "header": {
+        "greeting": "Jeina Salamova",
+        "contactBtn": "Contactez-moi"
+      },
+      "about": {
+        "title": "À propos de moi",
+        "description": "Bonjour ! Je m'appelle Jeina Salamova, une développeuse web junior passionnée. J'ai récemment terminé mon Bac +2 en développement web et web mobile. J'adore créer des choses et donner vie à des idées innovantes grâce au code. Mon parcours en développement web m'a permis d'acquérir les compétences nécessaires pour créer des sites dynamiques et réactifs. Je suis toujours prête à apprendre de nouvelles technologies et à améliorer mes compétences. Créons quelque chose d'extraordinaire ensemble !"
+      },
+      "skills": {
+        "title": "Compétences",
+        "html": "HTML5",
+        "css": "CSS3",
+        "javascript": "JavaScript",
+        "php": "PHP",
+        "sql": "SQL",
+        "wordpress": "WordPress",
+        "nodejs": "Node.js",
+        "vuejs": "Vue.js",
+        "symfony": "Symfony",
+        "androidStudio": "Android Studio",
+        "bootstrap": "Bootstrap",
+        "figma": "Figma",
+        "python": "Python",
+        "django": "Django"
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "fitAndFood": {
+          "title": "Fit and Food",
+          "description": "Un site WordPress pour des fit motivators qui aident à se mettre en forme."
+        },
+        "nestinove": {
+          "title": "Nestinove",
+          "description": "Un incubateur en ligne conçu pour soutenir les entrepreneurs."
+        },
+        "portfolio": {
+          "title": "Portfolio",
+          "description": "Mon portfolio personnel présentant mes projets et compétences."
+        }
+      },
+      "contact": {
+        "title": "Contactez-moi",
+        "name": "Nom",
+        "email": "E-mail",
+        "subject": "Sujet",
+        "message": "Message",
+        "sendBtn": "Envoyer"
+      }
+    }
+  }
+  

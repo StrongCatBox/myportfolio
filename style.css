@@ -229,18 +229,63 @@ body {
     }
 }
 
-/* Captcha */
+/* toggle icons*/
 
-.recaptcha-center {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    /* Ajuste la marge supérieure selon tes besoins */
+.language-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
 }
 
-.g-recaptcha {
-    transform: scale(1.0);
-    /* Ajuste l'échelle si tu veux le rendre plus petit ou plus grand */
-    transform-origin: 0 0;
-    /* Maintenir l'origine du reCAPTCHA */
+.language-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.icon-fr,
+.icon-en {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    /* Ajuste la largeur de l'icône */
+    height: 60px;
+    /* Ajuste la hauteur de l'icône */
+    /* Pour réduire la taille de l'icône, change ces valeurs */
+}
+
+.icon-fr {
+    left: 8px;
+}
+
+.icon-en {
+    right: 8px;
+    display: none;
+    /* Caché par défaut */
+}
+
+.language-toggle input:checked+.toggle-label {
+    background-color: var(--secondary-color);
+}
+
+.language-toggle input:checked+.toggle-label .icon-en {
+    display: block;
+    /* Affiche l'icône anglais */
+}
+
+.language-toggle input:checked+.toggle-label .icon-fr {
+    display: none;
+    /* Cache l'icône français */
 }
