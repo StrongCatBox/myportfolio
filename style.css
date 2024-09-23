@@ -228,3 +228,19 @@ body {
         font-size: 1.4rem;
     }
 }
+
+/* Captcha */
+
+.recaptcha-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    /* Ajuste la marge supérieure selon tes besoins */
+}
+
+.g-recaptcha {
+    transform: scale(1.0);
+    /* Ajuste l'échelle si tu veux le rendre plus petit ou plus grand */
+    transform-origin: 0 0;
+    /* Maintenir l'origine du reCAPTCHA */
+}
