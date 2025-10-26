@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: linear-gradient(135deg, #C8A2C8 0%, #B19CD9 100%);
 }
 
 .hero-background {
@@ -24,33 +25,98 @@
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
     z-index: 0;
+    overflow: hidden;
 }
 
-.color-block {
-    width: 50%;
+/* Effet étoiles - petites */
+.hero-background::before {
+    content: '';
+    position: absolute;
+    width: 100%;
     height: 100%;
-    animation: colorShift 8s ease-in-out infinite;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 60px 70px, white, transparent),
+        radial-gradient(1px 1px at 50px 50px, white, transparent),
+        radial-gradient(1px 1px at 130px 80px, white, transparent),
+        radial-gradient(2px 2px at 90px 10px, white, transparent),
+        radial-gradient(1px 1px at 110px 60px, white, transparent),
+        radial-gradient(2px 2px at 30px 90px, white, transparent),
+        radial-gradient(1px 1px at 150px 30px, white, transparent),
+        radial-gradient(1px 1px at 70px 120px, white, transparent),
+        radial-gradient(2px 2px at 170px 90px, white, transparent);
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    animation: sparkle 3s linear infinite;
 }
 
-.color-block.pink {
-    background: linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 100%);
+/* Effet étoiles - moyennes */
+.hero-background::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(3px 3px at 40px 60px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 80px 20px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(3px 3px at 140px 40px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 100px 100px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(3px 3px at 160px 120px, rgba(255, 255, 255, 0.8), transparent);
+    background-size: 250px 250px;
+    background-repeat: repeat;
+    animation: sparkle 4s linear infinite reverse;
+}
+
+/* Étoiles brillantes individuelles */
+.color-block {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        0 0 10px 2px rgba(255, 255, 255, 0.8),
+        0 0 20px 4px rgba(255, 255, 255, 0.4);
 }
 
 .color-block.purple {
-    background: linear-gradient(135deg, #C8A2C8 0%, #B19CD9 100%);
+    top: 20%;
+    left: 30%;
+    animation: twinkle 2s ease-in-out infinite;
 }
 
-@keyframes colorShift {
+.color-block.pink {
+    top: 60%;
+    right: 20%;
+    animation: twinkle 3s ease-in-out infinite 0.5s;
+}
+
+@keyframes sparkle {
 
     0%,
     100% {
-        transform: translateX(0);
+        opacity: 1;
+        transform: scale(1);
     }
 
     50% {
-        transform: translateX(5%);
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(0.5);
     }
 }
 
@@ -77,6 +143,7 @@
 
 .profile-image-container {
     animation: float 3s ease-in-out infinite;
+    position: relative;
 }
 
 @keyframes float {
@@ -92,12 +159,43 @@
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     background: white;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4),
+        0 0 0 15px rgba(255, 255, 255, 0.1),
+        0 0 0 30px rgba(255, 255, 255, 0.05);
     border: 8px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    50%,
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
 }
 
 .hero-text {
@@ -244,8 +342,10 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .skill-card {
@@ -351,6 +451,28 @@
     margin-bottom: 0.5rem;
 }
 
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.timeline-list li {
+    color: #555;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-list li::before {
+    content: '▸';
+    color: #C8A2C8;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
 /* Formation Section */
 .formations-section {
     background: white;
@@ -406,8 +528,62 @@
 
 /* Contact Section */
 .contact-section {
-    background: linear-gradient(135deg, #FFB6C1 0%, #C8A2C8 100%);
+    background: linear-gradient(135deg, #C8A2C8 0%, #B19CD9 100%);
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet étoiles dans le contact - petites */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 60px 70px, white, transparent),
+        radial-gradient(1px 1px at 50px 50px, white, transparent),
+        radial-gradient(1px 1px at 130px 80px, white, transparent),
+        radial-gradient(2px 2px at 90px 10px, white, transparent),
+        radial-gradient(1px 1px at 110px 60px, white, transparent),
+        radial-gradient(2px 2px at 30px 90px, white, transparent),
+        radial-gradient(1px 1px at 150px 30px, white, transparent),
+        radial-gradient(1px 1px at 70px 120px, white, transparent),
+        radial-gradient(2px 2px at 170px 90px, white, transparent);
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    animation: sparkle 3s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Effet étoiles dans le contact - moyennes */
+.contact-section::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(3px 3px at 40px 60px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 80px 20px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(3px 3px at 140px 40px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 100px 100px, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(3px 3px at 160px 120px, rgba(255, 255, 255, 0.8), transparent);
+    background-size: 250px 250px;
+    background-repeat: repeat;
+    animation: sparkle 4s linear infinite reverse;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .contact-section .section-title {
