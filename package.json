@@ -1,18 +1,17 @@
 {
   "name": "jeina-portfolio",
-  "homepage": "https://github.com/StrongCatBox/myportfolio",
+  "homepage": "https://StrongCatBox.github.io/myportfolio",
   "version": "1.0.0",
   "description": "Portfolio de Jeina Salamova",
   "type": "module",
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
-
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "postbuild": "cp dist/index.html dist/404.html || copy dist\\index.html dist\\404.html"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -23,3 +22,8 @@
     "vite": "^5.0.0"
   }
 }
+
+
+
+
+
